@@ -64,7 +64,7 @@ const FormsRepository = {
           INSERT ([Id], [FormEntryId], [FieldDefinitionId], [FieldName], [Value], [ValueType])
           VALUES (NEWID(), @sessionId, NEWID(), source.[FieldName], source.[Value], 'string');
       `)
-    connection.close()
+    await connection.close()
   }
 }
 
